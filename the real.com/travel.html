@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Diaries Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    /* Travel Theme Setup */
+    body {
+        background-color: #f0f8ff; /* AliceBlue - a very light, airy blue */
+        font-family: 'Poppins', sans-serif;
+        padding: 30px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 40px;
+        font-size: 2rem;
+    }
+
+    h2 span {
+        color: #e74c3c; /* Accent color for 'World' or similar text */
+        border-bottom: 3px solid #e74c3c;
+    }
+
+    /* The Grid */
+    .travel-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    /* The Card Container */
+    .travel-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* Hover Effect: Float Up */
+    .travel-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Image Container to force aspect ratio */
+    .image-wrapper {
+        height: 220px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    /* Hover Effect: Slow Zoom */
+    .travel-card:hover .image-wrapper img {
+        transform: scale(1.1);
+    }
+
+    /* Location Badge (Top Right) */
+    .location-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Card Content */
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .card-desc {
+        font-size: 0.9rem;
+        color: #777;
+        line-height: 1.4;
+    }
+
+    /* Emoji/Icon styling helper */
+    .icon { color: #e74c3c; }
+
+</style>
+</head>
+<body>
+
+    <h2>Explore the <span>World</span></h2>
+
+    <div class="travel-grid">
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Kyoto</div>
+                <img src="https://loremflickr.com/600/400/temple,japan?random=1" alt="Travel 1">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Ancient Temples</div>
+                <div class="card-desc">Walking through the historic districts.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Paris</div>
+                <img src="https://loremflickr.com/600/400/paris,tower?random=2" alt="Travel 2">
+            </div>
+            <div class="card-content">
+                <div class="card-title">City of Lights</div>
+                <div class="card-desc">Sunset views near the Eiffel Tower.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Bali</div>
+                <img src="https://loremflickr.com/600/400/beach,bali?random=3" alt="Travel 3">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Tropical Paradise</div>
+                <div class="card-desc">Relaxing by the crystal clear waters.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Alps</div>
+                <img src="https://loremflickr.com/600/400/mountain,snow?random=4" alt="Travel 4">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Mountain Hiking</div>
+                <div class="card-desc">Fresh air and snowy peaks.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Rome</div>
+                <img src="https://loremflickr.com/600/400/rome,ruins?random=5" alt="Travel 5">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Roman History</div>
+                <div class="card-desc">Exploring the Colosseum ruins.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> New York</div>
+                <img src="https://loremflickr.com/600/400/nyc,skyline?random=6" alt="Travel 6">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Concrete Jungle</div>
+                <div class="card-desc">The energy of Times Square.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Iceland</div>
+                <img src="https://loremflickr.com/600/400/waterfall,iceland?random=7" alt="Travel 7">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Nature's Power</div>
+                <div class="card-desc">Chasing massive waterfalls.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Cairo</div>
+                <img src="https://loremflickr.com/600/400/desert,camel?random=8" alt="Travel 8">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Desert Safari</div>
+                <div class="card-desc">Golden sands and ancient pyramids.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> London</div>
+                <img src="https://loremflickr.com/600/400/london,bridge?random=9" alt="Travel 9">
+            </div>
+            <div class="card-content">
+                <div class="card-title">London Calling</div>
+                <div class="card-desc">A misty morning on the bridge.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Sydney</div>
+                <img src="https://loremflickr.com/600/400/sydney,opera?random=10" alt="Travel 10">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Harbor Views</div>
+                <div class="card-desc">Sunny days down under.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Peru</div>
+                <img src="https://loremflickr.com/600/400/machupicchu,mountain?random=11" alt="Travel 11">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Inca Trail</div>
+                <div class="card-desc">Hiking the ancient path.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Santorini</div>
+                <img src="https://loremflickr.com/600/400/greece,blue?random=12" alt="Travel 12">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Greek Islands</div>
+                <div class="card-desc">White walls and blue domes.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Kenya</div>
+                <img src="https://loremflickr.com/600/400/lion,safari?random=13" alt="Travel 13">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Wild Safari</div>
+                <div class="card-desc">Meeting the wildlife.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Venice</div>
+                <img src="https://loremflickr.com/600/400/venice,boat?random=14" alt="Travel 14">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Canal Ride</div>
+                <div class="card-desc">Romance on the water.</div>
+            </div>
+        </div>
+
+        <div class="travel-card">
+            <div class="image-wrapper">
+                <div class="location-badge"><span class="icon">📍</span> Norway</div>
+                <img src="https://loremflickr.com/600/400/aurora,sky?random=15" alt="Travel 15">
+            </div>
+            <div class="card-content">
+                <div class="card-title">Northern Lights</div>
+                <div class="card-desc">Magic in the night sky.</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

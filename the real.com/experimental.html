@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experimental Art Gallery</title>
+<style>
+    /* Dark Theme Setup */
+    body {
+        background-color: #121212; /* Deep dark background */
+        font-family: 'Courier New', Courier, monospace; /* Monospace font for an 'experimental' feel */
+        padding: 40px 20px;
+        color: #e0e0e0;
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* The Grid Layout */
+    .experimental-grid {
+        display: grid;
+        /* Responsive columns */
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* The Image Box Container */
+    .art-box {
+        position: relative;
+        background-color: #000;
+        height: 350px; /* Taller vertical aspect ratio */
+        overflow: hidden;
+        border: 1px solid #333;
+        transition: border-color 0.3s ease;
+    }
+
+    /* Hover: Border Glow */
+    .art-box:hover {
+        border-color: #00ffcc; /* Cyan accent color */
+    }
+
+    /* The Image */
+    .art-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8; /* Slightly dim initially */
+        transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+        filter: grayscale(40%); /* Artistic desaturation */
+    }
+
+    /* Image Hover Effects */
+    .art-box:hover img {
+        transform: scale(1.1); /* Zoom in */
+        opacity: 1; /* Full brightness */
+        filter: grayscale(0%); /* Full color */
+    }
+
+    /* The Overlay Text */
+    .overlay {
+        position: absolute;
+        bottom: -50px; /* Hidden below the box initially */
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.85);
+        color: #00ffcc;
+        transition: bottom 0.3s ease;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    /* Reveal Overlay on Hover */
+    .art-box:hover .overlay {
+        bottom: 0;
+    }
+
+</style>
+</head>
+<body>
+
+    <h2>Experimental Collection</h2>
+
+    <div class="experimental-grid">
+        
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/abstract,art?random=1" alt="Experimental 1">
+            <div class="overlay">Light Leak Process</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/neon,blur?random=2" alt="Experimental 2">
+            <div class="overlay">Motion Blur Study</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/geometry,pattern?random=3" alt="Experimental 3">
+            <div class="overlay">Geometric Distortion</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/fluid,paint?random=4" alt="Experimental 4">
+            <div class="overlay">Fluid Dynamics</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/glitch,tech?random=5" alt="Experimental 5">
+            <div class="overlay">Data Moshing</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/smoke,dark?random=6" alt="Experimental 6">
+            <div class="overlay">Smoke Signals</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/macro,texture?random=7" alt="Experimental 7">
+            <div class="overlay">Macro Texture</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/reflection,mirror?random=8" alt="Experimental 8">
+            <div class="overlay">Fractured Mirror</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/shadow,light?random=9" alt="Experimental 9">
+            <div class="overlay">High Contrast</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/prism,color?random=10" alt="Experimental 10">
+            <div class="overlay">Prism Effect</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/glass,broken?random=11" alt="Experimental 11">
+            <div class="overlay">Shattered View</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/infrared,landscape?random=12" alt="Experimental 12">
+            <div class="overlay">Infrared Shift</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/cyberpunk,city?random=13" alt="Experimental 13">
+            <div class="overlay">Cyber Haze</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/water,ink?random=14" alt="Experimental 14">
+            <div class="overlay">Ink in Water</div>
+        </div>
+
+        <div class="art-box">
+            <img src="https://loremflickr.com/500/700/scifi,dark?random=15" alt="Experimental 15">
+            <div class="overlay">Void Space</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

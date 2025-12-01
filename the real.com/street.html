@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Street Photography Gallery</title>
+<style>
+    /* General Reset */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+
+    /* Gallery Container */
+    .gallery-container {
+        display: grid;
+        /* This creates a responsive grid that fits as many columns as possible */
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Individual Image Box */
+    .image-box {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        height: 300px; /* Fixed height for uniformity */
+    }
+
+    /* Hover Effect for the Box */
+    .image-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+
+    /* The Image Styling */
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures image covers the box without stretching */
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    /* Subtle Zoom on Hover */
+    .image-box:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Optional: Caption Styling */
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        color: white;
+        padding: 20px 15px 10px;
+        opacity: 0; /* Hidden by default */
+        transition: opacity 0.3s ease;
+    }
+
+    .image-box:hover .caption {
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+
+    <h2 style="text-align:center; margin-bottom:30px; color:#333;">Best Street Images</h2>
+
+    <div class="gallery-container">
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/street,city?random=1" alt="Street Photography 1">
+            <div class="caption">Urban Life</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/street,road?random=2" alt="Street Photography 2">
+            <div class="caption">City Lights</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/street,people?random=3" alt="Street Photography 3">
+            <div class="caption">Crowded Places</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/architecture,street?random=4" alt="Street Photography 4">
+            <div class="caption">Architecture</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/traffic,street?random=5" alt="Street Photography 5">
+            <div class="caption">Rush Hour</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/street,night?random=6" alt="Street Photography 6">
+            <div class="caption">Night Walk</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/alley,street?random=7" alt="Street Photography 7">
+            <div class="caption">Hidden Alleys</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/market,street?random=8" alt="Street Photography 8">
+            <div class="caption">Local Market</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/graffiti,street?random=9" alt="Street Photography 9">
+            <div class="caption">Street Art</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/rain,street?random=10" alt="Street Photography 10">
+            <div class="caption">Rainy Day</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/neon,street?random=11" alt="Street Photography 11">
+            <div class="caption">Neon Vibes</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/car,street?random=12" alt="Street Photography 12">
+            <div class="caption">Vintage Cars</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/bus,street?random=13" alt="Street Photography 13">
+            <div class="caption">Public Transit</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/dog,street?random=14" alt="Street Photography 14">
+            <div class="caption">Street Companions</div>
+        </div>
+
+        <div class="image-box">
+            <img src="https://loremflickr.com/600/400/shadow,street?random=15" alt="Street Photography 15">
+            <div class="caption">Light & Shadow</div>
+        </div>
+    </div>
+
+</body>
+</html>

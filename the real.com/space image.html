@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      margin: 0;
+      padding: 20px;
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .box {
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+    }
+    .box:hover {
+      transform: scale(1.07);
+    }
+    .box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .caption {
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Space Image Gallery</h1>
+  <div class="container">
+
+    <div class="box"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Space 1"><div class="caption">Space Image 1</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031" alt="Space 2"><div class="caption">Space Image 2</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564" alt="Space 3"><div class="caption">Space Image 3</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e" alt="Space 4"><div class="caption">Space Image 4</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3" alt="Space 5"><div class="caption">Space Image 5</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2" alt="Space 6"><div class="caption">Space Image 6</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3" alt="Space 7"><div class="caption">Space Image 7</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1450849608880-6f787542c88a" alt="Space 8"><div class="caption">Space Image 8</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa" alt="Space 9"><div class="caption">Space Image 9</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2" alt="Space 10"><div class="caption">Space Image 10</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae" alt="Space 11"><div class="caption">Space Image 11</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1466354424719-343280fe118b" alt="Space 12"><div class="caption">Space Image 12</div></div>
+    <div class="box"><img src="C:\Users\Lakshya\Desktop\download (1).jpg" alt="Space 13"><div class="caption">Space Image 13</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Space 14"><div class="caption">Space Image 14</div></div>
+    <div class="box"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="Space 15"><div class="caption">Space Image 15</div></div>
+
+  </div>
+</body>
+</html>
